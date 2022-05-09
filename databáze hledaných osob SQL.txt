@@ -1,0 +1,43 @@
+CREATE TABLE `appearance` (
+  `ID` smallint NOT NULL,
+  `nationality` enum('CS','DE','US','AU','UG','PRC') COLLATE utf8_unicode_ci NOT NULL,
+  `height` smallint NOT NULL,
+  `weight` smallint NOT NULL,
+  `sex` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
+  `hair_color` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `eye_color` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `special_features` varchar(150) COLLATE utf8_unicode_ci NOT NULL
+);
+
+
+CREATE TABLE `criminal_info` (
+  `ID` smallint NOT NULL,
+  `wanted_for` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `armed` varchar(3) COLLATE utf8_unicode_ci NOT NULL COMMENT 'yes/no',
+  `danger_level` enum('high','medium','low','none') COLLATE utf8_unicode_ci NOT NULL,
+  `extra_info` varchar(300) COLLATE utf8_unicode_ci NOT NULL
+);
+
+
+
+CREATE TABLE `personal_info` (
+  `ID` smallint NOT NULL,
+  `first_name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `last_name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `age` smallint NOT NULL,
+  `place_of_birth` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `languges` varchar(100) COLLATE utf8_unicode_ci NOT NULL
+);
+
+
+ALTER TABLE `appearance`
+  ADD PRIMARY KEY (`ID`);
+
+
+ALTER TABLE `criminal_info`
+  ADD PRIMARY KEY (`ID`);
+
+
+ALTER TABLE `personal_info`
+  ADD PRIMARY KEY (`ID`);
+
