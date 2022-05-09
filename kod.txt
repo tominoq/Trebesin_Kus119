@@ -1,0 +1,63 @@
+\documentclass[12pt,a4paper,notitlepage]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[czech]{babel}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\begin{document}
+
+\title{Databáze trestně stíhaných osob}
+\author{ Tomáš Kůs, Matěj Kraus, Roman Sixta, Josef Rigo}
+\date{10.10.2021}
+\maketitle
+
+\begin{abstract}
+Tento dokument byl vypracovaný společně se všemi členy týmu a ověřuje základní znalosti \LaTeX{}, databází a projektového řízení.
+
+Tým pracoval bez pomoci ostatních a využil všech dostupných materialů k dohledání informací. Veškeré licenční a právní náležitosti jsou upraveny v tomto dokumentu aby nebyli v rozporu s právy.
+
+Právo využit dokument k své činnosti mají pouze jeho autoři, a osoby povolené autorami.
+
+Všecha jména či jiné informace jsou smyšlené, jakákoli podobnost s realitou je čistě náhodná.
+\end{abstract}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+
+\section{Popis databáze}
+Databáze je založena na záznamech z aktivní pátrací evidence Policie České republiky. 
+Obsahuje informace o trestně stíhaných osobách.
+
+Databáze je vytvořena v jazyce MySQL a využívá veškeré technologické
+
+vlastnosti této DB.
+\newpage
+\section{Licenční informace a HW požadavky}
+\subsection{Licence}
+- LaTex Project Public License (LPPL) 1.3c
+\subsection{Hardware}
+\subsection{Software}
+- Mozilla Public License 2.0
+\newpage
+\section{Enumerizace hodnot}
+\subsection{Normované enumerizace}
+\subsection{Custom enumerizace}
+\newpage
+\section{Databázová struktura}
+\subsection{ER diagram}
+\subsection{Tabulka XXX}
+\subsubsection{Struktura}
+\subsubsection{Provázání tabulky}
+\subsection{Tabulka XXX}
+\subsubsection{Struktura}
+\subsubsection{Provázání tabulky}
+\subsection{Tabulka XXX}
+\subsubsection{Struktura}
+\subsubsection{Provázání tabulky}
+
+
+\end{document}
