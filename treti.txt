@@ -1,0 +1,114 @@
+\documentclass[12pt,a4paper,notitlepage]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[czech]{babel}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\begin{document}
+
+\title{Databáze trestně stíhaných osob}
+\author{ Tomáš Kůs, Matěj Kraus, Roman Sixta, Josef Rigo}
+\date{10.10.2021}
+\maketitle
+
+\begin{abstract}
+Tento dokument byl vypracovaný společně se všemi členy týmu a ověřuje základní znalosti \LaTeX{}, databází a projektového řízení.
+
+Tým pracoval bez pomoci ostatních a využil všech dostupných materialů k dohledání informací. Veškeré licenční a právní náležitosti jsou upraveny v tomto dokumentu aby nebyli v rozporu s právy.
+
+Právo využit dokument k své činnosti mají pouze jeho autoři, a osoby povolené autorami.
+
+Všecha jména či jiné informace jsou smyšlené, jakákoli podobnost s realitou je čistě náhodná.
+\end{abstract}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+
+\section{Popis databáze}
+Databáze je založena na záznamech z aktivní pátrací evidence Policie České republiky.
+Obsahuje informace o trestně stíhaných osobách.
+
+Databáze je vytvořena v jazyce MySQL a využívá veškeré technologické
+
+vlastnosti této DB.
+\newpage
+\section{Licenční informace a HW požadavky}
+\subsection{Licence}
+- LaTex Project Public License (LPPL) 1.3c
+\subsection{Hardware}
+- Stolní kancelářský počítač(HP 205 21.5" G4), Tiskárna(HP Officejet Pro 7740 All-in-One)
+\subsection{Software}
+- Mozilla Public License 2.0
+\newpage
+\section{Enumerizace hodnot}
+\subsection{nationality - iso 3166-1}
+\subsection{danger level}
+
+\begin {tabular} {|c|c|c|c|}
+
+\hspace{high & medium & low & none}
+
+\end{tabular}
+
+\newpage
+\section{Databázová struktura}
+\subsection{ER diagram}
+
+\includegraphics [width=130mm]{tabulky.jpg}
+
+\subsection{Tabulka personal-info}
+\subsubsection{Struktura}
+\begin{itemize}
+  \item ID - smallint
+  \item first-name - varchar(50)
+  \item last-name - varchar(50)
+  \item age - smallint 
+  \item place-of-birth -varchar (50)
+  \item languages - varchar(100)
+\end{itemize}
+\subsubsection{Provázání tabulky}
+\begin{itemize}
+\item personal-info-has-many-appearance
+\item personal-info-has-many-criminal-info
+\end{itemize}
+\subsection{Tabulka appearance}
+\subsubsection{Struktura}
+\begin{itemize}
+  \item ID - smallint
+  \item nationality - varchar(100)
+  \item height - smallint
+  \item weight - smallint
+  \item sex varchar(15)
+  \item hair-color - varchar(20)
+  \item eye-color - varchar(20)
+  \item special-features varchar(150)
+\end{itemize}
+\subsubsection{Provázání tabulky}
+\begin{itemize}
+\item personal-info-has-many-appearance
+\end{itemize}
+\subsection{Tabulka criminal_info}
+\subsubsection{Struktura}
+\begin{itemize}
+  \item ID - smallint
+  \item wanted-for - varchar(100)
+  \item armed - varchar
+  \item danger-level - varchar(20)
+  \item extra-info- varchar(300)
+\end{itemize}
+
+
+
+
+
+\subsubsection{Provázání tabulky}
+\begin{itemize}
+\item personal-info-has-many-criminal-info
+\end{itemize}
+
+\end{document}
+ 
